@@ -6,7 +6,7 @@ export function BetFeed() {
 
   useEffect(() => {
     async function fetchBets() {
-      const { data, error } = await supabase.from("wagers").select("*").order("created_at", { ascending: false });
+      const { data, error } = await supabase.from("wagers2").select("*").order("created_at", { ascending: false });
       if (!error) setBets(data);
     }
 
