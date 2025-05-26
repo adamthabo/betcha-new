@@ -2,6 +2,7 @@ import React from "react";
 import { BetFeed } from "../components/BetFeed";
 import { WalletDisplay } from "../components/WalletDisplay";
 import { AvatarDropdown } from "../components/AvatarDropdown";
+import { MakeBetForm } from "../components/MakeBetForm";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
       </div>
 
       {/* Main interaction buttons */}
-      <div className="flex justify-center space-x-6 py-16">
+      <div className="flex justify-center space-x-6 py-12">
         <button className="bg-yellow-400 text-black font-bold py-4 px-8 rounded-2xl text-xl hover:scale-105 transition">
           Make a Bet
         </button>
@@ -30,8 +31,11 @@ export default function App() {
         </button>
       </div>
 
+      {/* Make a Bet Form */}
+      <MakeBetForm />
+
       {/* Scrollable feed */}
-      <div className="px-6">
+      <div className="px-6 mt-10">
         <div className="overflow-y-auto h-[400px] relative">
           <div className="absolute top-0 h-6 w-full bg-gradient-to-b from-black to-transparent z-10" />
           <BetFeed />
